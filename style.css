@@ -1,0 +1,115 @@
+.main{
+    margin-left: 6rem;
+    height: 95vh;
+
+    
+}
+
+body::-webkit-scrollbar{
+    width: 0.25rem
+}
+
+body::-webkit-scrollbar-track{
+    background: black;
+}
+
+.main-content{
+    margin-left: 1rem;
+}
+
+.navbar{
+    background-color: black;
+    transition: width 200ms ease;
+    position: fixed;
+}
+
+.interesting{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0.6;
+}
+
+
+
+.navin{
+    text-decoration: none;
+    color: black;
+    margin-left: 1rem;
+
+}
+
+.navlink{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.link-text{
+    display: none;
+    margin-left: 1rem;
+    opacity: 0.6;
+    color: white;
+}
+
+.navbar:hover .link-text{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+/* For small screens */
+@media only screen and (max-width: 600px) {
+    .navbar {
+      top: 0;
+      width: 100vw;
+      height: 5rem;
+    }
+    .interesting {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-top: 2rem;
+    }
+  
+    .main {
+      margin-top: 20%;
+    }
+    .navbar:hover{
+        opacity: 1;
+    }
+    .link-text:hover{
+        opacity: 1;
+    }
+    *{
+      font-size: 15px;
+    }
+  }
+  
+  /* For large screens */
+  @media only screen and (min-width: 600px) {
+    .interesting {
+      top: 0;
+      width: 5rem;
+      height: 100vh;
+      flex-direction: column;
+    }
+  
+    .navbar:hover {
+      width: 16rem;
+      align-items: center;
+      opacity: 1;
+    }
+  
+    .navbar:hover .link-text {
+      display: flex;
+    }
+    .navin{
+        margin-top: 2rem;
+    }
+    .link-text:hover{
+        opacity: 1;
+    }
+  }
+
